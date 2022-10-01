@@ -12,7 +12,7 @@
   <div>
     <h1>Composition API<hr /></h1>
     <UserRepositories :user="'Esteban'" />
-    <Home first-name="Esteban" last-name="Diaz"/>
+    <Home first-name="Esteban" last-name="Diaz" @load="onLoad"/>
   </div>
 </template>
 
@@ -30,6 +30,9 @@ export default {
   name: "App",
   components: { Menu, Modal, UserRepositories, Home },
   mixins: [base],
+  methods: {
+    onLoad: console.log,
+  },
 };
 </script>
 

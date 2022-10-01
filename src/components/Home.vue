@@ -13,7 +13,8 @@ export default {
     firstName: String,
     lastName: String,
   },
-  setup(props) {
+  emits: ["load"],
+  setup(props, { attrs, expose, slots, emit }) {
     const text = ref("Hola Vue");
     const obj = reactive({ counter: 0 });
 
@@ -30,6 +31,11 @@ export default {
     // );
 
     const fullName = computed(() => `${firstName.value} ${lastName.value}`);
+
+    console.log("Attributes", attrs);
+    expose({ fullName });
+    console.log("Slots", slots);
+    setTimeout(() => emit("load", "Evento despues de 4s"), 4000);
 
     return { text, obj, fullName };
   },
