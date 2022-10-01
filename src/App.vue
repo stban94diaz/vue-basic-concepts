@@ -9,19 +9,26 @@
     <h1>TelePorts - Modal</h1>
     <Modal />
   </div>
+  <div>
+    <h1>Composition API</h1>
+    <UserRepositories :user="'Esteban'" />
+    <Home />
+  </div>
 </template>
 
 <script>
 // Components
 import Menu from "./components/Menu.vue";
 import Modal from "./components/Modal.vue";
+import UserRepositories from "./components/UserRepositories.vue";
+import Home from "./components/Home.vue";
 
 // Mixins
 import base from "@/mixins/base.js";
 
 export default {
   name: "App",
-  components: { Menu, Modal },
+  components: { Menu, Modal, UserRepositories, Home },
   mixins: [base],
 };
 </script>
