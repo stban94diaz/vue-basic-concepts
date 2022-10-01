@@ -1,13 +1,22 @@
 <template>
-  <button @click="show = !show">Menu</button>
-  <Menu v-show="show" />
+  <div>
+    <h1>Transiciones</h1>
+
+    <button @click="show = !show">Menu</button>
+    <Menu v-show="show" />
+  </div>
+  <div>
+    <h1>TelePorts - Modal</h1>
+    <Modal />
+  </div>
 </template>
 
 <script>
 import Menu from "./components/Menu.vue";
+import Modal from "./components/Modal.vue";
 export default {
   name: "App",
-  components: { Menu },
+  components: { Menu, Modal },
   data: () => ({
     show: false,
   }),
