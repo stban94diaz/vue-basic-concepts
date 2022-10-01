@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import { provide } from "vue";
+
 // Components
 import Menu from "./components/Menu.vue";
 import Modal from "./components/Modal.vue";
@@ -32,6 +34,9 @@ export default {
   mixins: [base],
   methods: {
     onLoad: console.log,
+  },
+  setup() {
+    provide("userName", "esteban.diaz");
   },
 };
 </script>

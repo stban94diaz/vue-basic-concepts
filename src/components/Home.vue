@@ -3,16 +3,20 @@
   <div>Composition API - {{ text }} ({{ obj.counter }})</div>
   <h3>Computed functions</h3>
   Nombre completo: {{ fullName }}
+  <h3>Provider / inject</h3>
+  <DeepComponent />
 </template>
 
 <script>
 import { computed, reactive, ref, toRefs, watch } from "vue";
+import DeepComponent from "@/components/DeepComponent.vue";
 
 export default {
   props: {
     firstName: String,
     lastName: String,
   },
+  components: { DeepComponent },
   emits: ["load"],
   setup(props, { attrs, expose, slots, emit }) {
     const text = ref("Hola Vue");
