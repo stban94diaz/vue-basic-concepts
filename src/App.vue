@@ -14,6 +14,10 @@
     <UserRepositories :user="'Esteban'" />
     <Home first-name="Esteban" last-name="Diaz" @load="onLoad"/>
   </div>
+  <div>
+    <h1>Vue - Options<hr /></h1>
+    <HomeOptions first-name="Esteban" last-name="Diaz" />
+  </div>
 </template>
 
 <script>
@@ -24,13 +28,14 @@ import Menu from "./components/Menu.vue";
 import Modal from "./components/Modal.vue";
 import UserRepositories from "./components/UserRepositories.vue";
 import Home from "./components/Home.vue";
+import HomeOptions from "./components/HomeOptions.vue";
 
 // Mixins
 import base from "@/mixins/base.js";
 
 export default {
   name: "App",
-  components: { Menu, Modal, UserRepositories, Home },
+  components: { Menu, Modal, UserRepositories, Home, HomeOptions },
   mixins: [base],
   methods: {
     onLoad: console.log,
