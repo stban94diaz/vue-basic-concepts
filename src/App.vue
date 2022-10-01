@@ -1,16 +1,16 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div>
-    <h1>Transiciones</h1>
-
+    <h1>Transiciones<hr /></h1>
     <button @click="show = !show">Menu</button>
     <Menu v-show="show" />
   </div>
   <div>
-    <h1>TelePorts - Modal</h1>
+    <h1>TelePorts - Modal<hr /></h1>
     <Modal />
   </div>
   <div>
-    <h1>Composition API</h1>
+    <h1>Composition API<hr /></h1>
     <UserRepositories :user="'Esteban'" />
     <Home />
   </div>

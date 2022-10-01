@@ -1,15 +1,20 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div>Composition API - {{ text }} ({{ obj.counter }})</div>
+  <h3>Computed functions</h3>
+  Nombre completo: {{ fullName }}
 </template>
 
 <script>
-import { reactive, ref, watch } from "vue";
+import { computed, reactive, ref, watch } from "vue";
 
 export default {
   setup() {
     const text = ref("Hola Vue");
     const obj = reactive({ counter: 0 });
+
+    const firstName = ref("Esteban");
+    const lastName = ref("Diaz");
 
     setInterval(() => obj.counter++, 2000);
 
@@ -21,7 +26,9 @@ export default {
     //   console.log(JSON.stringify(valor), JSON.stringify(anterior))
     // );
 
-    return { text, obj };
+    const fullName = computed(() => `${firstName.value} ${lastName.value}`);
+
+    return { text, obj, fullName };
   },
 };
 </script>
