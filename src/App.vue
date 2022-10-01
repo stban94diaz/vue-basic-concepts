@@ -18,6 +18,10 @@
     <h1>Vue - Options<hr /></h1>
     <HomeOptions first-name="Esteban" last-name="Diaz" />
   </div>
+  <div>
+    <h1>Composition API - Setup<hr /></h1>
+    <HomeSetup first-name="Esteban" last-name="Diaz" @load="onLoad" />
+  </div>
 </template>
 
 <script>
@@ -32,10 +36,11 @@ import HomeOptions from "./components/HomeOptions.vue";
 
 // Mixins
 import base from "@/mixins/base.js";
+import HomeSetup from "./components/HomeSetup.vue";
 
 export default {
   name: "App",
-  components: { Menu, Modal, UserRepositories, Home, HomeOptions },
+  components: { Menu, Modal, UserRepositories, Home, HomeOptions, HomeSetup },
   mixins: [base],
   methods: {
     onLoad: console.log,
