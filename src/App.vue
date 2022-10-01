@@ -1,16 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <button @click="show = !show">Menu</button>
+  <Menu v-show="show" />
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import Menu from "./components/Menu.vue";
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  components: { Menu },
+  data: () => ({
+    show: false,
+  }),
 };
 </script>
 
