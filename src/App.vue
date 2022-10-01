@@ -16,16 +16,13 @@
 import Menu from "./components/Menu.vue";
 import Modal from "./components/Modal.vue";
 
-// Utils
-import lifeCycle from "./utils/lifeCycle.js";
+// Mixins
+import base from "@/mixins/base.js";
 
 export default {
   name: "App",
   components: { Menu, Modal },
-  data: () => ({
-    show: false,
-  }),
-  ...lifeCycle,
+  mixins: [base],
 };
 </script>
 
