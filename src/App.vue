@@ -12,7 +12,7 @@
   <div>
     <h1>Composition API<hr /></h1>
     <UserRepositories :user="'Esteban'" />
-    <Home />
+    <Home first-name="Esteban" last-name="Diaz"/>
   </div>
 </template>
 
