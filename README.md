@@ -1,5 +1,7 @@
 # options
 
+Url despliegue: https://vue-basic-concepts.vercel.app
+
 ## Project setup
 ```
 yarn install
